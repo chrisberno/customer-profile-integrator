@@ -1,6 +1,10 @@
-import React from 'react';
+import type React from 'react';
 
-const CRMProfileContainer = ({ task }) => {
+interface Task {
+  sid?: string;
+}
+
+const CRMProfileContainer: React.FC<{ task: Task }> = ({ task }) => {
   console.log('CRMProfileContainer rendering, task:', task);
   const mockData = { id: 2, name: 'John Doe', email: 'john@example.com' };
   return (

@@ -1,11 +1,11 @@
 import { FlexPlugin } from '@twilio/flex-plugin';
-import CRMProfileContainer from './components/CRMProfileContainer';
+import CRMProfileContainer from '././components/CRMProfileContainer'; // Ensure this file exists at the specified path
 import React from 'react';
 import { withTaskContext } from '@twilio/flex-ui';
 
 const PLUGIN_NAME = 'CustomerProfileIntegrator';
 
-const CRMProfileContainerWithTask = withTaskContext((props) => {
+const CRMProfileContainerWithTask = withTaskContext((props: { task?: any }) => {
   console.log('CRMProfileContainerWithTask rendering, props:', props);
   return props.task ? <CRMProfileContainer task={props.task} /> : <div>Waiting for task...</div>;
 });
